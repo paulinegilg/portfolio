@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% set config = config_data %}
+{% set position = position %}
+
+{% set page_title = data.title %}
+
+{% block content %}
+
+<div class="home-content">
+
+    <div class="hero flex-column">
+        <img src="{{ data.hero.image }}" alt=""/>
+        <hgroup class="flex-column">
+            <h1>{{ data.hero.title }}</h1>
+            <p>{{ data.hero.subtitle }}</p>
+        </hgroup>
+    </div>
+
+    {% if config.actions|length %}
+    <section class="actions flex-row-center">
+        {% for action in config.actions %}
+        <a href="{{ action.link }}" title="{{ action.title }}" class="flex-column">
+            {% if action.icon %}
+            <div class="actions__action-icon">
+                <i class="bi bi-{{ action.icon }}" aria-hidden="true"></i>
+            </div>
+            {% endif %}
+            <h2>{{ action.title }}</h2>
+            <p>{{ action.text }}</p>
+        </a>
+        {% endfor %}
+    </section>
+    {% endif %}
+
+    <section class="content-section">
+        {{ data.content }}
+    </section>
+
+    {% if posts|length %}
+    <section class="posts flex-column">
+        <h2>{{ config.labels.postsTitle }}</h2>
+            {% for post in posts %}
+            <article class="flex-row">
+                <i class="bi bi-asterisk" aria-hidden="true"></i>
+                <div class="flex-column">
+                    <h3 class="flex-row">
+                        <a href="posts/{{ post.slug }}.html" class="flex-column">
+                        {{ post.title }}
+                        </a>
+                        <span>{{ post.date }}</span>
+                    </h3>
+                    <p>{{ post.summary }}</p>
+                </div>
+            </article>
+            {% endfor %}
+    </section>
+    {% endif %}
+</div>
+
+{% endblock %}
