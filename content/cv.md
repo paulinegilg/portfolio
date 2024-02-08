@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: cv
 title: CV
 slug: cv
 ---
@@ -83,7 +83,7 @@ RGPD et protection des données personnelles, accessibilité, qualité web, gest
 
 *Juillet 2022 - 5 jours, 35h*
 
-Introduction au framework React
+Introduction à React
 
 ### Maîtrise de la qualité en projet web
 
@@ -119,7 +119,7 @@ Initiation à la recherche, sociologie contemporaine, littérature moderne et cl
 
 **Université Ochanomizu, Tokyo (Japon)**
 
-*Juillet 2016 — Août 2016*
+*Juillet 2016 — août 2016*
 
 Séjour d'étude de la langue et de la culture japonaises, financé par une bourse de la Fondation de France
 

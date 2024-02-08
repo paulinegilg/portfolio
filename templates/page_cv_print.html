@@ -1,0 +1,150 @@
+{% set public = public %}
+{% set cv = cv_data %}
+{% set personalInfo = cv.personalInformation %}
+{% set skills = cv.skills %}
+{% set experiences = cv.experiences %}
+{% set continuous = cv.continuousTraining %}
+{% set university = cv.universityTraining %}
+{% set languages = cv.languages %}
+{% set hobbies = cv.hobbies %}
+
+
+<html lang="fr">
+<head>
+      <meta charset="utf-8">
+      <title>CV</title>
+</head>
+<body>
+    <section id="left-section">
+        <hgroup>
+            <h1>{{ personalInfo.name }}</h1>
+            <p>{{ personalInfo.jobTitle }}</p>
+        </hgroup>
+        <section id="contact-section">
+            <dl>
+                {% if personalInfo.website.url %}
+                <dt>Site web</dt>
+                <dl>
+                    <a href="{{ personalInfo.website.url }}">
+                        {% if personalInfo.website.name %}
+                        {{ personalInfo.website.name }}
+                        {% else %}
+                        {{ personalInfo.website.url }}
+                        {% endif %}
+                    </a>
+                </dl>
+                {% endif %}
+                <dt>Email</dt>
+                <dd><a href="mailto:{{ personalInfo.contact.email }}">{{ personalInfo.contact.email }}</a></dd>
+                {% if not public %}
+                <dt>Tél.</dt>
+                <dd><a href="phone:{{ personalInfo.contact.phone }}">{{ personalInfo.contact.phone }}</a></dd>
+                <dt>Adresse</dt>
+                <dd>
+                    {{ personalInfo.contact.address.street }}<br>
+                    {{ personalInfo.contact.address.zipCode }} {{ personalInfo.contact.address.city }}
+                </dd>
+                {% endif %}
+            </dl>
+        </section>
+        <section>
+            <h2>Compétences</h2>
+            <dl>
+                {% for skill in skills %}
+                <dt>{{ skill.name }}</dt>
+                <dd>{{ skill.description }}</dd>
+                {% endfor %}
+            </dl>
+        </section>
+        <section>
+            <h2>Langues</h2>
+            <dl>
+                {% for language in languages %}
+                <dt>{{ language.language }}</dt>
+                <dd>{{ language.level }}</dd>
+                {% endfor %}
+            </dl>
+        </section>
+        <section>
+            <h2>Loisirs</h2>
+            <dl>
+                {% for hobby in hobbies %}
+                <dt>{{ hobby.name }}</dt>
+                <dd>{{ hobby.description }}</dd>
+                {% endfor %}
+            </dl>
+        </section>
+    </section>
+    <section id="right-section">
+        <section>
+            <h2>Expérience</h2>
+                {% for experience in experiences %}
+                    <hgroup>
+                        <h3>{{ experience.jobTitle }}</h3>
+                        <p>
+                            <em>
+                                {{ experience.employer }} /
+                                {{ experience.fromDate }} -
+                                {% if experience.toDate %} {{ experience.toDate }}
+                                {% else %} aujourd'hui
+                                {% endif %}
+                            </em>
+                        </p>
+                    </hgroup>
+                    {% if experience.projects|length %}
+                        {% for project in experience.projects %}
+                            {% if project.url %}
+                                <h4><a href="{{ project.url }}" title="Voir le projet {{ project.title }}">{{ project.title }}</a></h4>
+                                {% else %}
+                                <h4>{{ project.title }}</h4>
+                            {% endif %}
+                            <ul>
+                                {% for accomplishment in project.accomplishments %}
+                                    <li>{{ accomplishment }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endfor %}
+                    {% else %}
+                    <ul>
+                    {% for accomplishment in experience.accomplishments %}
+                        <li>{{ accomplishment }}</li>
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
+                {% endfor %}
+        </section>
+        <section>
+            <h2>Formation continue</h2>
+            {% for training in continuous %}
+            <hgroup>
+                <h3>{{ training.title }}</h3>
+                <p>
+                    <em>
+                        {{ training.provider }} /
+                        {{ training.year }} - {{ training.duration }}
+                    </em>
+                </p>
+            </hgroup>
+            <p>{{ training.description }}</p>
+            {% endfor %}
+        </section>
+        <section>
+            <h2>Parcours universitaire</h2>
+            {% for training in university %}
+            <hgroup>
+                <h3>{{ training.title }}</h3>
+                <p>
+                    <em>
+                        {{ training.university }} /
+                        {{ training.fromDate }} - {{ training.toDate }}
+                        {% if training.honours %} / {{ training.honours }} {% endif %}
+                    </em>
+                </p>
+            </hgroup>
+            <p>{{ training.description }}</p>
+            {% endfor %}
+        </section>
+    </section>
+</body>
+</html>
+
