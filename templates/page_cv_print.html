@@ -1,6 +1,7 @@
 {% set public = public %}
 {% set cv = cv_data %}
 {% set personalInfo = cv.personalInformation %}
+{% set privateInfo = cv_private_data %}
 {% set skills = cv.skills %}
 {% set experiences = cv.experiences %}
 {% set continuous = cv.continuousTraining %}
@@ -35,14 +36,14 @@
                 </dl>
                 {% endif %}
                 <dt>Email</dt>
-                <dd><a href="mailto:{{ personalInfo.contact.email }}">{{ personalInfo.contact.email }}</a></dd>
+                <dd><a href="mailto:{{ personalInfo.email }}">{{ personalInfo.email }}</a></dd>
                 {% if not public %}
                 <dt>Tél.</dt>
-                <dd><a href="phone:{{ personalInfo.contact.phone }}">{{ personalInfo.contact.phone }}</a></dd>
+                <dd><a href="phone:{{ privateInfo.phone }}">{{ privateInfo.phone }}</a></dd>
                 <dt>Adresse</dt>
                 <dd>
-                    {{ personalInfo.contact.address.street }}<br>
-                    {{ personalInfo.contact.address.zipCode }} {{ personalInfo.contact.address.city }}
+                    {{ privateInfo.address.street }}<br>
+                    {{ privateInfo.address.zipCode }} {{ privateInfo.address.city }}
                 </dd>
                 {% endif %}
             </dl>

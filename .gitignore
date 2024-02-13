@@ -1,4 +1,4 @@
 build/
 **/__pycache__/
 private/
-plugins/cv/cv.json
+plugins/cv/cv_private.json

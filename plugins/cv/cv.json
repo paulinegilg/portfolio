@@ -1,0 +1,163 @@
+{
+  "personalInformation": {
+    "name": "Pauline Gilg",
+    "jobTitle": "Développeuse web",
+    "website": {
+      "url": "https://paulinegilg.fr",
+      "name": "paulinegilg.fr"
+    },
+    "email": "paulinegilg@protonmail.com"
+  },
+  "skills": [
+    {
+      "name": "Programmation",
+      "description": "JavaScript, TypeScript, Python"
+    },
+    {
+      "name": "Technologies web",
+      "description": "HTML5, CSS3, Vue.js, React, SSG (Eleventy, VuePress, VitePress), Django, REST"
+    },
+    {
+      "name": "Bases de données",
+      "description": "SQL, PostGreSQL"
+    },
+    {
+      "name": "Systèmes d'exploitation",
+      "description": "GNU/Linux"
+    },
+    {
+      "name": "Autres",
+      "description": "RGPD et protection des données personnelles, accessibilité, qualité web, méthodologie de projet Agile/SCRUM\n"
+    }
+  ],
+  "experiences": [
+    {
+      "jobTitle": "Développeuse d'applications full stack",
+      "employer": "Université de Strasbourg (DNum)",
+      "fromDate": "Septembre 2022",
+      "toDate": "",
+      "projects": [
+        {
+          "title": "Campulse",
+          "url": "https://etu-campulse.fr",
+          "accomplishments": [
+            "Développements avec Vue.js, sur une API Django Rest Framework",
+            "Montée en compétences sur Python et Django",
+            "Tests unitaires avec Jest/Vitest",
+            "Formation à la QA avec Gherkin et Playwright"
+          ]
+        }
+      ]
+    },
+    {
+      "jobTitle": "Intervenante chargée de cours",
+      "employer": "Master CAWEB, université de Strasbourg",
+      "fromDate": "Novembre 2021",
+      "toDate": "",
+      "accomplishments": [
+        "Fondamentaux du RGPD et mise en conformité d'un site web (en français et en anglais)",
+        "Introduction à l'accessibilité numérique",
+        "Introduction à la maîtrise de la qualité en projet web",
+        "Introduction à la sobriété numérique"
+      ]
+    },
+    {
+      "jobTitle": "Webmaster",
+      "employer": "Ville et Eurométropole de Strasbourg",
+      "fromDate": "Octobre 2019",
+      "toDate": "Septembre 2022",
+      "accomplishments": [
+        "Maintenance de sites et CMS (Liferay, WordPress)",
+        "Gestion de l'hébergement et de la MOA",
+        "Développement de pages web événementielles",
+        "Standardisation des processus de création de sites web par des prestataires externes",
+        "Mise en conformité technique avec le RGPD"
+      ]
+    },
+    {
+      "jobTitle": "Cheffe de projets numériques junior",
+      "employer": "Ville et Eurométropole de Strasbourg",
+      "fromDate": "Octobre 2018",
+      "toDate": "Septembre 2019",
+      "accomplishments": [
+        "Gestion de projets de sites web événementiels (Noêl, été, FARSe...)",
+        "Planification, création d'arborescence, organisation des contenus et rédaction des cahiers des charges",
+        "Participation à la stratégie de communication numérique en lien avec les projets"
+      ]
+    }
+  ],
+  "continuousTraining": [
+    {
+      "title": "React + Redux",
+      "provider": "Le Réacteur",
+      "year": "2022",
+      "duration": "35h",
+      "description": "Introduction à React"
+    },
+    {
+      "title": "Maîtrise de la qualité en projet web",
+      "provider": "Opquast",
+      "year": "2021",
+      "duration": "40h",
+      "description": "Certification obtenue avec 965 points (niveau experte)"
+    }
+  ],
+  "universityTraining": [
+    {
+      "title": "Master CAWEB",
+      "university": "Université de Strasbourg",
+      "fromDate": "2017",
+      "toDate": "2019",
+      "honours": "Mention très bien",
+      "description": "Gestion de projets web, communication numérique, développement web (HTML, CSS, JavaScript, PHP et WordPress), localisation et renforcement en langues étrangères (anglais et japonais)"
+    },
+    {
+      "title": "Maitrise de japonais (EMOS)",
+      "university": "Université de Strasbourg",
+      "fromDate": "2016",
+      "toDate": "2017",
+      "honours": "Mention très bien",
+      "description": "Initiation à la recherche, sociologie contemporaine, littérature moderne et classique, histoire moderne, traduction"
+    },
+    {
+      "title": "Programme d'été en langue et culture japonaises (Japanese Summer program)",
+      "university": "Université Ochanomizu, Tokyo (Japon)",
+      "fromDate": "Juillet 2016",
+      "toDate": "Août 2016",
+      "honours": "",
+      "description": "Séjour d'étude de la langue et de la culture japonaises, financé par une bourse de la Fondation de France"
+    },
+    {
+      "title": "Licence de japonais (LLCE)",
+      "university": "Université de Strasbourg",
+      "fromDate": "2013",
+      "toDate": "2016",
+      "honours": "Mention très bien",
+      "description": "Apprentissage de la langue japonaise orale et écrite, histoire et littérature japonaises, traduction"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Anglais",
+      "level": "C1"
+    },
+    {
+      "language": "Japonais",
+      "level": "B1"
+    }
+  ],
+  "hobbies": [
+    {
+      "name": "Web",
+      "description": "développement de plusieurs sites web personnels et administration d'un serveur"
+    },
+    {
+      "name": "Pratique sportive",
+      "description": "cyclisme sur route, course à pied, natation, randonnée, yoga"
+    },
+    {
+      "name": "Lecture",
+      "description": "littérature japonaise et anglaise, mangas"
+    }
+  ]
+}
