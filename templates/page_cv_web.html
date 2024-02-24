@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% set config = config_data %}
+{% set position = position %}
+
+{% set page_title = data.title %}
+
+{% set cv = cv_data %}
+{% set skills = cv.skills %}
+{% set experiences = cv.experiences %}
+{% set continuous = cv.continuousTraining %}
+{% set university = cv.universityTraining %}
+{% set languages = cv.languages %}
+{% set hobbies = cv.hobbies %}
+
+{% block content %}
+
+<section class="content-section">
+    <div class="container">
+        <h1>{{ page_title }}</h1>
+        <div class="content-section__content">
+            <section class="cv_section">
+                <h2>Compétences</h2>
+                <dl>
+                    {% for skill in skills %}
+                    <dt>{{ skill.name }}</dt>
+                    <dd>{{ skill.description }}</dd>
+                    {% endfor %}
+                </dl>
+            </section>
+            <section class="cv_section">
+                <h2>Expérience</h2>
+                {% for experience in experiences %}
+                    <hgroup>
+                        <h3>{{ experience.jobTitle }}</h3>
+                        <p>
+                            <em>
+                                {{ experience.employer }} /
+                                {{ experience.fromDate }} -
+                                {% if experience.toDate %} {{ experience.toDate }}
+                                {% else %} aujourd'hui
+                                {% endif %}
+                            </em>
+                        </p>
+                    </hgroup>
+                    {% if experience.projects|length %}
+                        {% for project in experience.projects %}
+                            {% if project.url %}
+                                <h4><a href="{{ project.url }}" title="Voir le projet {{ project.title }}">{{ project.title }}</a></h4>
+                                {% else %}
+                                <h4>{{ project.title }}</h4>
+                            {% endif %}
+                            <ul>
+                                {% for accomplishment in project.accomplishments %}
+                                    <li>{{ accomplishment }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endfor %}
+                    {% else %}
+                    <ul>
+                    {% for accomplishment in experience.accomplishments %}
+                        <li>{{ accomplishment }}</li>
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
+                {% endfor %}
+            </section>
+            <section class="cv_section">
+                <h2>Formation continue</h2>
+                {% for training in continuous %}
+                <hgroup>
+                    <h3>{{ training.title }}</h3>
+                    <p>
+                        <em>
+                            {{ training.provider }} /
+                            {{ training.year }} - {{ training.duration }}
+                        </em>
+                    </p>
+                </hgroup>
+                <p>{{ training.description }}</p>
+                {% endfor %}
+            </section>
+            <section class="cv_section">
+                <h2>Parcours universitaire</h2>
+                {% for training in university %}
+                <hgroup>
+                    <h3>{{ training.title }}</h3>
+                    <p>
+                        <em>
+                            {{ training.university }} /
+                            {{ training.fromDate }} - {{ training.toDate }}
+                            {% if training.honours %} / {{ training.honours }} {% endif %}
+                        </em>
+                    </p>
+                </hgroup>
+                <p>{{ training.description }}</p>
+                {% endfor %}
+            </section>
+            <section class="cv_section">
+                <h2>Langues</h2>
+                <dl>
+                    {% for language in languages %}
+                    <dt>{{ language.language }}</dt>
+                    <dd>{{ language.level }}</dd>
+                    {% endfor %}
+                </dl>
+            </section>
+            <section class="cv_section">
+                <h2>Loisirs</h2>
+                <dl>
+                    {% for hobby in hobbies %}
+                    <dt>{{ hobby.name }}</dt>
+                    <dd>{{ hobby.description }}</dd>
+                    {% endfor %}
+                </dl>
+            </section>
+            <form action="public/cv-public.pdf">
+                <button type="submit"><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>Télécharger mon CV en PDF</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

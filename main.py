@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 from markdown2 import markdown
 from jinja2 import Environment, PackageLoader
-from plugins.cv import cv_to_pdf
+from plugins.cv import cv_to_pdf, cv_to_html
 import json
 
 # Load data from json config file
@@ -55,7 +55,7 @@ for page in os.listdir('content'):
         with open(file_path, 'r') as file:
             PAGES[page] = markdown(file.read(), extras=['metadata'])
 
-# BUILD #
+# BUILD
 
 # Build posts
 if config_data['posts']:
@@ -100,8 +100,15 @@ for page in PAGES:
         with open(file_path, 'w') as output_page_file:
             output_page_file.write(page_html)
 
-        # Generate cv
-        if page_metadata['layout'] == 'cv':
-            cv_to_pdf.generate_pdf(page_data, config_data, cv_data, cv_private_data, True)
-            cv_to_pdf.generate_pdf(page_data, config_data, cv_data, cv_private_data, False)
+# Generate CV
 
+# Web version
+page_data = {
+    'title': 'CV',
+    'slug': 'cv'
+}
+cv_to_html.generate_html(page_data, config_data, cv_data)
+
+# Pdf version
+cv_to_pdf.generate_pdf(cv_data, cv_private_data, True)
+cv_to_pdf.generate_pdf(cv_data, cv_private_data, False)
