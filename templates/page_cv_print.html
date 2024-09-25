@@ -1,5 +1,6 @@
 {% set public = public %}
 {% set cv = cv_data %}
+{% set profilePic = cv.profilePic %}
 {% set personalInfo = cv.personalInformation %}
 {% set privateInfo = cv_private_data %}
 {% set skills = cv.skills %}
@@ -17,6 +18,9 @@
 </head>
 <body>
     <section id="left-section">
+        {% if profilePic %}
+        <img src="{{ profilePic }}" alt=""/>
+        {% endif %}
         <hgroup>
             <h1>{{ personalInfo.name }}</h1>
             <p>{{ personalInfo.jobTitle }}</p>
@@ -49,7 +53,7 @@
             </dl>
         </section>
         <section>
-            <h2>Compétences</h2>
+            <h2><span aria-hidden="true">🛠️</span> Compétences</h2>
             <dl>
                 {% for skill in skills %}
                 <dt>{{ skill.name }}</dt>
@@ -58,7 +62,7 @@
             </dl>
         </section>
         <section>
-            <h2>Langues</h2>
+            <h2><span aria-hidden="true">🌍</span> Langues</h2>
             <dl>
                 {% for language in languages %}
                 <dt>{{ language.language }}</dt>
@@ -67,7 +71,7 @@
             </dl>
         </section>
         <section>
-            <h2>Loisirs</h2>
+            <h2><span aria-hidden="true">🚲</span> Loisirs</h2>
             <dl>
                 {% for hobby in hobbies %}
                 <dt>{{ hobby.name }}</dt>
@@ -78,68 +82,49 @@
     </section>
     <section id="right-section">
         <section>
-            <h2>Expérience</h2>
+            <h2><span aria-hidden="true">💼</span> Expérience</h2>
                 {% for experience in experiences %}
                     <hgroup>
                         <h3>{{ experience.jobTitle }}</h3>
                         <p>
-                            <em>
+                            <strong>
                                 {{ experience.employer }} /
                                 {{ experience.fromDate }} -
                                 {% if experience.toDate %} {{ experience.toDate }}
                                 {% else %} aujourd'hui
                                 {% endif %}
-                            </em>
+                            </strong>
                         </p>
                     </hgroup>
-                    {% if experience.projects|length %}
-                        {% for project in experience.projects %}
-                            {% if project.url %}
-                                <h4><a href="{{ project.url }}" title="Voir le projet {{ project.title }}">{{ project.title }}</a></h4>
-                                {% else %}
-                                <h4>{{ project.title }}</h4>
-                            {% endif %}
-                            <ul>
-                                {% for accomplishment in project.accomplishments %}
-                                    <li>{{ accomplishment }}</li>
-                                {% endfor %}
-                            </ul>
-                        {% endfor %}
-                    {% else %}
-                    <ul>
-                    {% for accomplishment in experience.accomplishments %}
-                        <li>{{ accomplishment }}</li>
-                    {% endfor %}
-                    </ul>
-                    {% endif %}
+                    <p>{{ experience.accomplishments }}</p>
                 {% endfor %}
         </section>
         <section>
-            <h2>Formation continue</h2>
+            <h2><span aria-hidden="true">📚</span> Formation continue</h2>
             {% for training in continuous %}
             <hgroup>
                 <h3>{{ training.title }}</h3>
                 <p>
-                    <em>
+                    <strong>
                         {{ training.provider }} /
                         {{ training.year }} - {{ training.duration }}
-                    </em>
+                    </strong>
                 </p>
             </hgroup>
             <p>{{ training.description }}</p>
             {% endfor %}
         </section>
         <section>
-            <h2>Parcours universitaire</h2>
+            <h2><span aria-hidden="true">🎓</span> Parcours universitaire</h2>
             {% for training in university %}
             <hgroup>
                 <h3>{{ training.title }}</h3>
                 <p>
-                    <em>
+                    <strong>
                         {{ training.university }} /
                         {{ training.fromDate }} - {{ training.toDate }}
                         {% if training.honours %} / {{ training.honours }} {% endif %}
-                    </em>
+                    </strong>
                 </p>
             </hgroup>
             <p>{{ training.description }}</p>
