@@ -7,7 +7,7 @@
     {
       "title": "CV",
       "text": "Mon parcours universitaire et professionnel, mes projets en cours.",
-      "link": "cv.html",
+      "link": "public/cv-public.pdf",
       "icon": "briefcase-fill"
     },
     {
@@ -19,14 +19,18 @@
   ],
   "nav": [
     {
-      "text": "À propos", "link": "about.html"
-    },
-    {
       "text": "Contact", "link": "mailto:paulinegilg@protonmail.com"
     }
   ],
   "socialLinks": [
-
+    {
+      "link": "https://www.linkedin.com/in/pauline-gilg/",
+      "type": "linkedin"
+    },
+    {
+      "link": "",
+      "type": "github"
+    }
   ],
   "footer": {
     "legalLinks": [
@@ -35,7 +39,7 @@
       }
     ],
     "copyright": "Pauline Gilg",
-    "licence": "Licence GPLv3"
+    "licence": "2024"
   },
   "labels": {
     "homeLink": "Accueil",

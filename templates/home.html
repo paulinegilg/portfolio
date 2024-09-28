@@ -9,13 +9,35 @@
 
 <div class="home-content">
 
-    <div class="hero flex-column">
-        <img src="{{ data.hero.image }}" alt=""/>
-        <hgroup class="flex-column">
-            <h1>{{ data.hero.title }}</h1>
+    <div class="hero flex-row-center">
+        <div class="hero__img">
+            <div></div>
+            <img src="./assets/images/{{ data.hero.image }}" alt=""/>
+        </div>
+        <div>
+            <hgroup class="flex-column">
+            <h1>{{ data.hero.title1 }}<br>
+                {{ data.hero.title2 }}
+            </h1>
             <p>{{ data.hero.subtitle }}</p>
-        </hgroup>
+            </hgroup>
+            <ul>
+                {% for item in config_data.socialLinks %}
+                <li>
+                    <a href="{{ item.link }}" title="{{ item.type }} - {{ config.labels.newWindow }}">
+                        <i class="bi bi-{{ item.type }}"></i>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
+
+    <section class="resume">
+        <div class="container-sm">
+            {{ data.content }}
+        </div>
+    </section>
 
     {% if config.actions|length %}
     <section class="actions flex-row-center">
@@ -32,10 +54,6 @@
         {% endfor %}
     </section>
     {% endif %}
-
-    <section class="content-section">
-        {{ data.content }}
-    </section>
 
     {% if posts|length %}
     <section class="posts flex-column">
