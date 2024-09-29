@@ -2,11 +2,11 @@
 layout: home
 title: Accueil
 hero:
-    title1: Hello world,
-    title2: je suis Pauline !
+    title: Pauline Gilg
     subtitle: Développeuse web et enseignante
     image: profile-pic.jpg
 ---
 
-Développeuse **front-end** spécialisée en **Vue.js**, avec des compétences en React et Svelte, 
-je suis passionnée par l'**accessibilité** et l'**UX**.
+Hello world! Je suis Pauline, **développeuse front-end** passionnée par l'accessibilité, le design et l'UX.
+J'enseigne aussi en [Master CAWEB](https://mastercaweb.unistra.fr/), où je transmets mon intérêt pour la **qualité web**, le **RGPD** et l'**accessibilité**. 
+Quand je ne suis pas devant un ordinateur, j'aime rouler à vélo dans les montagnes, bricoler mes fidèles deux-roues et lire.
