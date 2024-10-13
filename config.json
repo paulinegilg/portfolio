@@ -7,26 +7,30 @@
     {
       "title": "CV",
       "text": "Mon parcours universitaire et professionnel, mes projets en cours.",
-      "link": "cv.html",
+      "link": "public/cv-public.pdf",
       "icon": "briefcase-fill"
     },
     {
       "title": "Supports de cours",
       "text": "Mes cours autour de la protection des données personnelles, de l'accessibilité et de la qualité web.",
-      "link": "https://caradoc.paulinegilg.fr",
+      "link": "https://caradoc.paulinegilg.fr/fr/",
       "icon": "mortarboard-fill"
     }
   ],
   "nav": [
     {
-      "text": "À propos", "link": "about.html"
-    },
-    {
       "text": "Contact", "link": "mailto:paulinegilg@protonmail.com"
     }
   ],
   "socialLinks": [
-
+    {
+      "link": "https://www.linkedin.com/in/pauline-gilg/",
+      "type": "linkedin"
+    },
+    {
+      "link": "https://github.com/paulinegilg",
+      "type": "github"
+    }
   ],
   "footer": {
     "legalLinks": [
@@ -35,7 +39,7 @@
       }
     ],
     "copyright": "Pauline Gilg",
-    "licence": "Licence GPLv3"
+    "licence": "2024"
   },
   "labels": {
     "homeLink": "Accueil",
