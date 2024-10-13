@@ -14,7 +14,9 @@ config_data = json.load(open('config.json', 'r'))
 
 # Load cv from json file
 cv_data = json.load(open('plugins/cv/cv.json', 'r'))
-cv_private_data = json.load(open('plugins/cv/cv_private.json', 'r'))
+
+if private:
+    cv_private_data = json.load(open('plugins/cv/cv_private.json', 'r'))
 
 # Set templates
 env = Environment(loader=PackageLoader('main', 'templates'))
@@ -114,7 +116,7 @@ page_data = {
 cv_to_html.generate_html(page_data, config_data, cv_data)
 
 # Pdf version
-cv_to_pdf.generate_pdf(cv_data, cv_private_data, True)
+cv_to_pdf.generate_pdf(cv_data, {}, True)
 
 if private:
     cv_to_pdf.generate_pdf(cv_data, cv_private_data, False)
