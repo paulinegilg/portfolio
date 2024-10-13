@@ -1,3 +1,4 @@
+build/
 **/__pycache__/
-private/
-plugins/cv/cv_private.json
+**/cv_private.json
+**/cv-private.pdf
