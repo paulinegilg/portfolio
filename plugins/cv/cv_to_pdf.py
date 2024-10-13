@@ -24,10 +24,10 @@ def generate_pdf(cv_data, cv_private_data, public):
     if public:
         os.makedirs('build/public', exist_ok=True)
         html.write_pdf('./build/public/cv-public.pdf', stylesheets=[css])
-        html.write_pdf('./plugins/cv/cv-public.pdf', stylesheets=[css])
 
     else:
-        html.write_pdf('./plugins/cv/cv-private.pdf', stylesheets=[css])
+        os.makedirs('build/private', exist_ok=True)
+        html.write_pdf('./build/private/cv-private.pdf', stylesheets=[css])
 
     # Remove temp html
     os.remove(file_path)

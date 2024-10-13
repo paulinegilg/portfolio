@@ -4,6 +4,10 @@ from markdown2 import markdown
 from jinja2 import Environment, PackageLoader
 from plugins.cv import cv_to_pdf, cv_to_html
 import json
+import sys
+
+# Privacy
+private = sys.argv[1] == 'private'
 
 # Load data from json config file
 config_data = json.load(open('config.json', 'r'))
@@ -111,4 +115,6 @@ cv_to_html.generate_html(page_data, config_data, cv_data)
 
 # Pdf version
 cv_to_pdf.generate_pdf(cv_data, cv_private_data, True)
-cv_to_pdf.generate_pdf(cv_data, cv_private_data, False)
+
+if private:
+    cv_to_pdf.generate_pdf(cv_data, cv_private_data, False)

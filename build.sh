@@ -10,6 +10,6 @@ mkdir ./build
 
 cp -r ./assets ./build
 
-python3 main.py
+python3 main.py "$1"
 
 echo "Build is complete! 🎉"
