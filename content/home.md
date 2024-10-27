@@ -29,5 +29,5 @@ projects:
       image: campulse.png
 social:
   title: On reste en contact ?
-  description: Lorem ipsum  
+  description: Je suis disponible pour de nouvelles aventures, <br>des projets passionnants et des échanges constructifs ☺️
 ---

@@ -41,7 +41,7 @@ La stack technique complète du projet côté front :
 
 Nous avons collaboré avec un prestataire pour une partie de la conception et du design.
 
-Nous avons aussi réalisé plusieurs **audits d’accessibilité** au cours du projet, atteignant une **conformité RGAA de 80 %**.
+Nous avons aussi réalisé plusieurs **audits d’accessibilité** au cours du projet, atteignant une **conformité RGAA de 80%**.
 A cette occasion, j'ai suivi une formation intensive sur le RGAA.
 
 ![La déclaration d'accessibilité publiée sur le site](assets/images/campulse-site-3.png)
