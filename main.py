@@ -86,7 +86,10 @@ for page in PAGES:
         home_page_data = {
             'content': PAGES[page],
             'title': page_metadata['title'],
-            'hero': page_metadata['hero']
+            'hero': page_metadata['hero'],
+            'highlights': page_metadata['highlights'],
+            'projects': page_metadata['projects'],
+            'social': page_metadata['social']
         }
         file_path = 'build/index.html'
         home_page_html = home_template.render(data=home_page_data, posts=posts_metadata, config_data=config_data, position=0)

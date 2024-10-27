@@ -1,6 +1,6 @@
 {
   "title": "Pauline Gilg",
-  "siteLogo": "braces",
+  "siteLogo": "",
   "lang": "fr",
   "posts": false,
   "actions": [
@@ -19,17 +19,34 @@
   ],
   "nav": [
     {
+      "text": "À propos", "link": "about.html"
+    },
+    {
       "text": "Contact", "link": "mailto:paulinegilg@protonmail.com"
     }
   ],
   "socialLinks": [
     {
       "link": "https://www.linkedin.com/in/pauline-gilg/",
-      "type": "linkedin"
+      "type": "LinkedIn",
+      "username": "/paulinegilg"
     },
     {
       "link": "https://github.com/paulinegilg",
-      "type": "github"
+      "type": "GitHub",
+      "username": "@paulinegilg"
+
+    },
+    {
+      "link": "https://woof.tech/@pauline",
+      "type": "Mastodon",
+      "username": "@pauline@woof.tech"
+
+    },
+    {
+      "link": "https://www.instagram.com/pau.glg/",
+      "type": "Instagram",
+      "username": "@pau.glg"
     }
   ],
   "footer": {
@@ -46,6 +63,8 @@
     "primaryNav": "Navigation principale",
     "newWindow": "Nouvelle fenêtre",
     "skipLink": "Aller au contenu",
-    "postsTitle": "Posts"
+    "postsTitle": "Quoi de neuf ?",
+    "allPosts": "Tous les posts",
+    "discover": "Découvrir"
   }
 }

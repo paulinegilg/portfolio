@@ -11,34 +11,25 @@
 </head>
 <body>
     <a href="#main" class="skip-link">{{ config.labels.skipLink }}</a>
-    <header>
-        <div class="nav-bar flex-row-end">
-            <div class="container flex-row-space-between">
+    <div class="container">
+        <header>
+            <div class="nav-bar">
                 <a class="nav-bar__site-title flex-row" href="{% if position %}../{% endif %}index.html" title="{{ config.labels.homeLink }} - {{ config.title }}">
                     <i class="bi bi-{{ config.siteLogo }}" aria-hidden="true"></i>{{ config.title }}
                 </a>
                 {% if config.actions|length %}
                 <nav>
-                    <ul class="flex-row">
+                    <ul>
                         {% for item in config.nav %}
                         <li>
                             <a href="{% if position %}../{% endif %}{{ item.link }}">{{ item.text }}</a>
-                        </li>
-                        {% endfor %}
-                        {% for item in config.socialLinks %}
-                        <li>
-                            <a href="{{ item.link }}" title="{{ item.type }} - {{ config.labels.newWindow }}">
-                                <i class="bi bi-{{ item.type }}"></i>
-                            </a>
                         </li>
                         {% endfor %}
                     </ul>
                 </nav>
                 {% endif %}
             </div>
-        </div>
-    </header>
-    <div class="site-container">
+        </header>
         <main role="main" id="main">
             {% block content %} {% endblock %}
         </main>

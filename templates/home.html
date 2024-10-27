@@ -4,71 +4,113 @@
 {% set position = position %}
 
 {% set page_title = data.title %}
+{% set hero = data.hero %}
+{% set highlights = data.highlights %}
+{% set projects = data.projects %}
+{% set social = data.social %}
+
 
 {% block content %}
 
 <div class="home-content">
 
     <div class="hero">
-        <img src="./assets/images/{{ data.hero.image }}" alt=""/>
-        <div>
+        <img src="./assets/images/{{ hero.image }}" alt=""/>
+        <div class="flex-column">
             <hgroup class="flex-column">
-            <h1>{{ data.hero.title }}</h1>
-            <p>{{ data.hero.subtitle }}</p>
+            <h1>{{ hero.title }}</h1>
+            <p>{{ hero.subtitle }}</p>
             </hgroup>
-            <ul>
+            <p>{{ hero.description }}</p>
+            <ul class="social-links">
                 {% for item in config_data.socialLinks %}
                 <li>
                     <a href="{{ item.link }}" title="{{ item.type }} - {{ config.labels.newWindow }}">
-                        <i class="bi bi-{{ item.type }}"></i>
+                        <i class="bi bi-{{ item.type.lower() }}"></i>
                     </a>
                 </li>
                 {% endfor %}
             </ul>
+            <div class="action-link accent">
+                <a href="{{ hero.action.url }}">{{ hero.action.label }}</a>
+            </div>
         </div>
     </div>
 
-    <section class="resume">
-        <div class="container-sm">
-            {{ data.content }}
+    {% if highlights %}
+    <section class="highlights flex-column">
+        <h2>{{ highlights.title }}</h2>
+        <div>
+            {% for key, value in highlights.elements.items() %}
+            <a class="item" href="{{ value.url }}">
+                <div style="background-image:url('assets/images/{{ value.image }}')"></div>
+                <div class="flex-column">
+                    <h3>{{ key }}</h3>
+                    <p>{{ value.description }}</p>
+                </div>
+            </a>
+            {% endfor %}
         </div>
-    </section>
-
-    {% if config.actions|length %}
-    <section class="actions flex-row-center">
-        {% for action in config.actions %}
-        <a href="{{ action.link }}" title="{{ action.title }}" class="flex-column">
-            {% if action.icon %}
-            <div class="actions__action-icon">
-                <i class="bi bi-{{ action.icon }}" aria-hidden="true"></i>
-            </div>
-            {% endif %}
-            <h2>{{ action.title }}</h2>
-            <p>{{ action.text }}</p>
-        </a>
-        {% endfor %}
     </section>
     {% endif %}
 
     {% if posts|length %}
     <section class="posts flex-column">
-        <h2>{{ config.labels.postsTitle }}</h2>
+        <div class="flex-row">
+            <h2>{{ config.labels.postsTitle }}</h2>
+            <div class="action-link accent">
+                <a href="posts">{{ config.labels.allPosts }}</a>
+            </div>
+        </div>
+        <div class="flex-column">
             {% for post in posts %}
-            <article class="flex-row">
-                <i class="bi bi-asterisk" aria-hidden="true"></i>
-                <div class="flex-column">
+            <a href="posts/{{ post.slug }}.html">
+                <article>
                     <h3 class="flex-row">
-                        <a href="posts/{{ post.slug }}.html" class="flex-column">
                         {{ post.title }}
-                        </a>
+                        <span aria-hidden="true">✨</span>
                         <span>{{ post.date }}</span>
                     </h3>
-                    <p>{{ post.summary }}</p>
-                </div>
-            </article>
+                </article>
+            </a>
             {% endfor %}
+        </div>
     </section>
     {% endif %}
+
+    {% if projects %}
+    <section class="projects flex-column">
+        <h2>{{ projects.title }}</h2>
+        <div>
+            {% for key, value in projects.elements.items() %}
+            <div class="item">
+                <div class="flex-column">
+                    <h3>{{ key }}</h3>
+                    <p>{{ value.description }}</p>
+                    <div class="action-link">
+                        <a href="{{ value.url }}">{{ config.labels.discover }}</a>
+                    </div>
+                </div>
+                <div style="background-image: url('assets/images/{{ value.image }}')"></div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    <section class="social-CTA">
+        <h2>{{ social.title }}</h2>
+        <p>{{ social.description }}</p>
+        <ul>
+            {% for item in config_data.socialLinks %}
+            <li>
+                <i class="bi bi-{{ item.type.lower() }}"></i>
+                <a href="{{ item.link }}">{{ item.type }}</a>
+                {{ item.username }}
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
 </div>
 
 {% endblock %}
