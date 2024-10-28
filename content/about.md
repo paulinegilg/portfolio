@@ -8,7 +8,7 @@ Enchantée ☺️ !
 
 **Je suis Pauline Gilg, développeuse, enseignante et couteau-suisse du web depuis 2018.**
 
-Si vous souhaitez collaborer avec moi, n'hésitez pas à [télépharger mon CV](public/cv-public.pdf) ou à [m'envoyer un mail](mailto:paulinegilg@protonmail.com) !
+Si vous souhaitez collaborer avec moi, n'hésitez pas à [télécharger mon CV](public/cv-public.pdf) ou à [m'envoyer un mail](mailto:paulinegilg@protonmail.com) !
 
 ## Mon parcours
 
