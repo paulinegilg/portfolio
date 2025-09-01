@@ -17,7 +17,7 @@ Campulse centralise un **annuaire**, la **signature de chartes**, les **demandes
 optimisant le suivi et allégeant la charge administrative. 
 Financée dans le cadre du programme "Services numériques aux étudiants" (France Relance), 
 la plateforme suscite un [intérêt national](https://savoirs.unistra.fr/campus/campulse-la-nouvelle-plateforme-des-associations-etudiantes), 
-avec un **déploiement SaaS** en cours dans 4 universités.
+avec un **déploiement SaaS** en cours dans 10 universités.
 
 ![Page d'entrée sur le module des commissions d'aide aux projets étudiants](assets/images/campulse-site-2.png)
 
