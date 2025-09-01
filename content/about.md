@@ -36,10 +36,11 @@ et ma passion pour le développement web... voilà ce qui m'anime !
 et informatique. Je me suis **spécialisée en qualité web**, principalement sur la question de la protection des données personnelles
 et la conformité RGPD, de l'accessibilité numérique et de l'UX.
 
-Quelques unes de mes réalisations :
+Quelques-unes de mes réalisations :
 
 - Développement front-end de [Campulse](campulse.html)
 - Développement front-end du référentiel interne de l'Université de Strasbourg
+- Développement front-end des conseils de perfectionnement de l'Université de Strasbourg
 - Gestion de la MOA (maintenance technique et mise en conformité RGPD) de 40 sites publics
 - Gestion de projet : refonte et localisation de la [version internationale de Strasbourg.eu](https://int.strasbourg.eu)
 - Gestion de projet : refonte éditoriale du site [Strasbourg Capitale de Noël](https://noel.strasbourg.eu) (+ de 2 millions de pages vues par an)
@@ -60,7 +61,6 @@ Quelques unes de mes réalisations :
 ## Mon kiff
 
 Quand je ne suis pas devant un ordinateur, je suis le plus souvent sur mon vélo ! 
-Je pratique régulièrement le **cyclisme sur route** (bientôt le gravel !),
-et je suis membre du [Trop Bien Vélo Club 🌈](https://www.instagram.com/trop_bien_velo_club/), un groupe de cyclistes strasbourgeois-es en mixité choisie.
+Je pratique régulièrement le **cyclisme sur route** (bientôt le gravel !).
 
-J'adore dessiner, peindre et faire du crochet ! J'espère ouvrir bientôt une boutique en ligne pour mes créations.
+J'adore jouer aux jeux vidéo, dessiner, peindre et faire du crochet !
