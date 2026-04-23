@@ -1,0 +1,8 @@
+services:
+  ropy:
+    build: .
+    container_name: ropy_container
+    tty: true
+    stdin_open: true
+    volumes:
+      - ~/Dev/portfolio/build:/app/build
