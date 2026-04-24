@@ -1,13 +1,13 @@
 {
-  "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8SY9lvj-7j6HGV1ebco4ESp31WFxb-ZEqCA&s",
+  "profilePic": "https://media.licdn.com/dms/image/v2/D4D03AQFJfRR8KoMUMg/profile-displayphoto-shrink_400_400/B4DZO6_iCkGoAg-/0/1734009037554?e=1778716800&v=beta&t=wFjg7zdeGYkzu8mrn_AjrxADZLVbPFRk46FVRsmXIjE",
   "personalInformation": {
     "name": "Pauline Gilg",
-    "jobTitle": "Développeuse front end et enseignante",
+    "jobTitle": "Développeuse d'applications web et Référente Accessibilité Numérique",
     "website": {
-      "url": "",
-      "name": ""
+      "url": "https://paulinegilg.fr",
+      "name": "paulinegilg.fr"
     },
-    "email": "paulinegilg@protonmail.com"
+    "email": "pgilg@unistra.fr"
   },
   "skills": [
     {
@@ -16,27 +16,27 @@
     },
     {
       "name": "Technologies web",
-      "description": "HTML5, CSS3, Vue.js, WordPress, Liferay"
+      "description": "HTML5, CSS3, Vue.js"
     },
     {
       "name": "Autres",
-      "description": "Git, GNU/Linux, Méthodologie de projet Agile/SCRUM, RGPD et protection des données personnelles, accessibilité, qualité web"
+      "description": "Git, GNU/Linux, Méthodologie de projet Agile/SCRUM, RGPD et protection des données personnelles, accessibilité, qualité web, Figma"
     }
   ],
   "experiences": [
     {
-      "jobTitle": "Développeuse front end",
+      "jobTitle": "Développeuse d'applications web",
       "employer": "Université de Strasbourg (DNum)",
       "fromDate": "Septembre 2022",
       "toDate": "",
-      "accomplishments": "Je développe des interfaces en Vue.js et Quasar sur une API REST, en prenant en compte les critères d'accessibilité et les bonnes pratiques de l'UX. Je participe notamment au projet \"Campulse\", annuaire des associations étudiantes et outil pour leurs démarches. J'ai mis en place des processus de déploiement automatisés via GitLab CI, garantissant la livraison continue de l'application dans plusieurs universités françaises."
+      "accomplishments": "Je développe des interfaces utilisateurs en Vue.js, en prenant en compte les critères du RGAA et les bonnes pratiques UX. Je mets en place des processus de déploiement automatisés pour les applications SaaS. Je pilote, en binôme, le Schéma Pluriannuel d'Accessibilité Numérique (SPAN)."
     },
     {
-      "jobTitle": "Enseignante",
-      "employer": "Master CAWEB, université de Strasbourg",
+      "jobTitle": "Formatrice",
+      "employer": "Université de Strasbourg",
       "fromDate": "Novembre 2021",
-      "toDate": "",
-      "accomplishments": "J'enseigne aux étudiants du master CAWEB comment garantir la qualité d'un projet web à travers divers prismes : la protection des données personnelles (RGPD), l'accessibilité et la sobriété numérique. Depuis 2023, j'anime également des workshops en anglais."
+      "toDate": "Avril 2026",
+      "accomplishments": "J'ai enseigné la maîtrise de la qualité en projet web (Master CAWEB) ainsi que les fondamentaux de l'algorithmique et de la programmation avec Python (DU Tremplin Réussite)."
     },
     {
       "jobTitle": "Webmaster",
@@ -87,7 +87,7 @@
       "description": "Apprentissage de la langue japonaise orale et écrite, histoire, sociologie et littérature japonaise, traduction"
     },
     {
-      "title": "Programme d'été en langue et culture japonaises (Japanese Summer program)",
+      "title": "Programme d'été en langue et culture japonaises",
       "university": "Université Ochanomizu, Tokyo (Japon)",
       "fromDate": "Juillet 2016",
       "toDate": "Août 2016",
@@ -107,12 +107,12 @@
   ],
   "hobbies": [
     {
-      "name": "Pratique sportive",
-      "description": "Cyclisme sur route (en club), randonnée, yoga, musculation"
+      "name": "Pratique artistique",
+      "description": "Danse hip-hop, improvisation théâtrale"
     },
     {
-      "name": "Lecture",
-      "description": "Littérature japonaise et anglophone, essais"
+      "name": "Pop culture et technologie",
+      "description": "Jeux vidéo, manga, anime, montage PC"
     }
   ]
 }

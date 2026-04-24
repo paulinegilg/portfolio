@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
     libpangoft2-1.0-0 \
     libharfbuzz0b \
     fonts-noto-color-emoji \
+    rsync \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
